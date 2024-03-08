@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./estilos.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <main class="contenedor">
+        <div class="logo">
+            <img src="./imagenes/Logo.png" alt="El logo es la letra a" id="logo-desktop">
+        </div>
+
+        <section class="principal">
+            <textarea id="campo-texto" placeholder="Ingrese el texto aquí" ></textarea>
+            
+            <div class="acciones">
+                <p id="exclamacion"> ! </p>
+                <p id="restriccion">  Sólo letras minúsculas y sin acento</p>
+
+                <div class="botones">
+                    <button class="boton" id="boton-encriptar"    onclick="encriptar()">Encriptar</button>
+                    <button class="boton" id="boton-desencriptar" onclick="desencriptar()">Desencriptar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="resultado">
+            <!-- Los siguientes div son excluyentes-->
+
+            <!-- No se ingresó texto a convertir -->
+            <div class="sinmensaje">
+                <img src="./imagenes/Muñeco.svg" alt="niño con lupa mira diamante" id="buscador">
+
+                <div class="dosfrases">
+                    <p id="noencontrado">Ningún mensaje fue encontrado</p>
+                    <p class="ingresatexto">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+            </div>
+
+            <!-- Mostrar el texto convertido-->
+            <div class="conmensaje">
+                <p id="texto-convertido"></p> 
+
+                <div class="copiar">
+                    <button type="button" class="boton" id="boton-copiar">Copiar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Grupo 6. ONE Oracle - Alura Latam 2024 - Desarrollado por Norma Noemí Salcedo</p>
+    </footer>
+</body>
+<script src="./script.js"></script>
+</html>
